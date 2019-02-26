@@ -6,7 +6,7 @@
  
 +#if __cplusplus < 201103L
 +
- #if (defined(_MSC_VER) && defined(_WIN64)) /* MSVC auto aligns in 64 bit builds */
+ #if EIGEN_COMP_MSVC && EIGEN_OS_WIN64 /* MSVC auto aligns in 64 bit builds */
  
  #define EIGEN_DEFINE_STL_VECTOR_SPECIALIZATION(...)
 @@ -24,4 +26,6 @@
